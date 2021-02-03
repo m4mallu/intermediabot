@@ -13,7 +13,7 @@ A advanced telegram bot which performs the following functions differently.
 - Downloading TouTube videos, taking Screenshots, Trimming videos of the Downloaded medias
 
 # Operation
-- Just send a telegram media to the bot chat and give /download command as replay to the media
+- Just send a telegram media to the bot chat and give `/download` command as replay to the media
 - Follow the bot instructions
 
 # Advantage
