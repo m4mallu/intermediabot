@@ -7,8 +7,8 @@
 # ---------------------------------------------------------------------------------------- #
 
 class Translation(object):
-    NOT_AUTH_TXT = "⚠️ <b>Unauthorized Access</b> ⚠️\n<code>You are not in Auth Users List.  So you can't use the core " \
-                   "components of this bot. Inconvenience is regretted !</code> "
+    NOT_AUTH_TXT = "⚠️ <b>Unauthorized Access</b> ⚠️\nYou are not in Auth Users.  So you can't use the core " \
+                   "components of this bot. Inconvenience is regretted !"
     DOWNLOAD_START = "📥<b>DOWNLOAD BEGIN</b>📥<i> Plz wait..</i>"
     UPLOAD_START = "📤<b>UPLOAD BEGIN</b>📤<i> Plz wait..</i>"
     SAVED_CUSTOM_THUMB_NAIL = "<b>✅ Thumbnail Saved Successfully.</b>\n<code>This file will be used in upcoming " \

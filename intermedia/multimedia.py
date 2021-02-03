@@ -42,7 +42,7 @@ async def download_media(bot, update):
         a0 = await update.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(8)
         await a0.delete()
-        return
+        raise pyrogram.StopPropagation()
     else:
         if ("download" in update.text) and (update.reply_to_message is not None):
             await update.delete()
