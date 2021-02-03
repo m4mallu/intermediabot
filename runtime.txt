@@ -1,9 +1,1 @@
-# File Name     - runtime
-# Description   - Python runtime
-# Owner         - Kiddilan
-# Repo          - https://github.com/m4mallu
-# Tg Uid        - @kiddilan
-# Channel       - @MovieKeralam
-# ---------------------------------------------------------------------------------------- #
-
-python-3.7.9
+python-3.8.7
