@@ -33,20 +33,16 @@ cache1 = {}
 cache2 = {}
 
 
-# -------------------------------- Bot will download media and rename as required --------------------------------------#
+# -------------------------------- Bot will download media and rename as required -------------------------------------#
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["download"]), group=1)
 async def download_media(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
-        await update.reply_chat_action("typing")
-        await update.reply_text(
-            text=Translation.NOT_AUTH_TXT,
-            reply_markup=pyrogram.InlineKeyboardMarkup(
-                [
-                    [pyrogram.InlineKeyboardButton("Close", callback_data="close")]
-                ])
-        )
-        await update.delete()
+        await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
+        a0 = await update.reply_text(text=Translation.NOT_AUTH_TXT)
+        time.sleep(8)
+        await a0.delete()
+        return
     else:
         if ("download" in update.text) and (update.reply_to_message is not None):
             await update.delete()
