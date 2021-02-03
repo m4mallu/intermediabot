@@ -2,9 +2,9 @@ import os
 
 class Config(object):    
     # get a token from @BotFather
-    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")
     # The Telegram API things
-    APP_ID = int(os.environ.get("APP_ID", 12345))
+    APP_ID = os.environ.get("APP_ID")
     API_HASH = os.environ.get("API_HASH")
     # Get these values from my.telegram.org
     # Array to store users who are authorized to use the bot
@@ -13,4 +13,4 @@ class Config(object):
     MAX_FILE_SIZE = 50000000
     TG_MAX_FILE_SIZE = 1572864000
     MAX_MESSAGE_LENGTH = 4096
-    PRE_FILE_TXT = os.environ.get("PRE_FILE_TXT", '@moviekeralam.')
+    PRE_FILE_TXT = os.environ.get("PRE_FILE_TXT")
