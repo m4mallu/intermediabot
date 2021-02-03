@@ -5,7 +5,7 @@
   "website": "https://github.com/m4mallu/intermediabot",
   "repository": "https://github.com/m4mallu/intermediabot",
   "env": {
-        "API_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "APP_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
         "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
         "TG_BOT_TOKEN": {"description": "Get Bot Token From BotFather Bot","required": true},
         "AUTH_USERS": {"description": "List of userIDs separated by <space>","required": true},

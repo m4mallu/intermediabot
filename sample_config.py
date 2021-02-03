@@ -13,4 +13,4 @@ class Config(object):
     MAX_FILE_SIZE = 50000000
     TG_MAX_FILE_SIZE = 1572864000
     MAX_MESSAGE_LENGTH = 4096
-    PRE_FILE_TXT = os.environ.get("PRE_FILE_TXT")
+    PRE_FILE_TXT = os.environ.get("PRE_FILE_TXT", "@MovieKeralam.")
