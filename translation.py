@@ -22,7 +22,8 @@ class Translation(object):
                  "it in the <b>Options</b> tab. Except this, videos won't have thumbnails.</code>\n\n2️⃣ <code>Forward a telegram " \
                  "media to the bot.</code>\n\n3️⃣ <code>Reply to the media with the command</code> <b>/download</b> <code>and follow the " \
                  "instructions.</code>\n\n4️⃣ <code>Bot will output your formatted media with custom thumbnail, screenshots and a " \
-                 "sample video.</code>\n\n<b>Credits- <a href='https://t.me/kiddilan'>@admin</a></b> "
+                 "sample video.</code>\n\n<code>Supported Extensions: .mkv, .mp4, .avi and " \
+                 ".webm</code>\n\n<b>Credits- <a href='https://t.me/kiddilan'>@admin</a></b> "
     SETTINGS_TEXT = "<b>These are my available options:</b>"
     THUMB_CAPTION = "<code>This image is your current thumbnail, Tap</code><b> DEL THUMB </b><code>if you wish to " \
                     "clear it !</code> "
