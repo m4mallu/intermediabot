@@ -34,20 +34,16 @@ async def save_photo(bot, update):
         time.sleep(8)
         await a.delete()
         return
-    await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
-    thumb_image_path = os.getcwd() + "/" + "thumbnails" + "/" + str(update.from_user.id) + ".jpg"
-    await bot.download_media(message=update, file_name=thumb_image_path)
-    await update.delete()
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.SAVED_CUSTOM_THUMB_NAIL,
-        reply_to_message_id=update.message_id,
-        reply_markup=pyrogram.InlineKeyboardMarkup(
-            [
-                [pyrogram.InlineKeyboardButton("Close", callback_data="close")]
-            ])
-    )
-
+    try:
+        await bot.delete_messages(chat_id=update.chat.id, message_ids=update.message_id)
+        thumb_image_path = os.getcwd() + "/" + "thumbnails" + "/" + str(update.from_user.id) + ".jpg"
+        await bot.download_media(message=update, file_name=thumb_image_path)
+        await update.delete()
+        a1 = await update.reply_text(text=Translation.SAVED_CUSTOM_THUMB_NAIL)
+        time.sleep(6)
+        await a1.delete()
+    except IndexError:
+        pass
 
 async def view_thumbnail(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
@@ -56,10 +52,7 @@ async def view_thumbnail(bot, update):
         time.sleep(8)
         await b.delete()
         return
-    await bot.delete_messages(
-        chat_id=update.message.chat.id,
-        message_ids=update.message.message_id
-    )
+    await bot.delete_messages(chat_id=update.message.chat.id, message_ids=update.message.message_id)
     thumb_image_path = os.getcwd() + "/" + "thumbnails" + "/" + str(update.from_user.id) + ".jpg"
     if os.path.exists(thumb_image_path):
         await bot.send_photo(
