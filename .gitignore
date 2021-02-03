@@ -84,6 +84,8 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+.idea
+.gitattributes
 env/
 venv/
 VENV/
