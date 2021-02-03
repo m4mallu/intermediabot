@@ -1,0 +1,16 @@
+# File Name     - Requirements
+# Description   - Dependency requirements to run the bot
+# Owner         - Kiddilan
+# Repo          - https://github.com/m4mallu
+# Tg Uid        - @kiddilan
+# Channel       - @MovieKeralam
+# ---------------------------------------------------------------------------------------- #
+
+aiohttp
+hachoir
+Pillow
+pyrogram
+requests
+tgcrypto
+git+https://github.com/ytdl-org/youtube-dl
+https://github.com/CW4RR10R/pyrogram/archive/asyncio.zip

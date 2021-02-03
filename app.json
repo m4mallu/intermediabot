@@ -1,0 +1,26 @@
+{
+  "name": "IntermediaBot",
+  "description": "Telegram's best Open Source ALL-In-One Multi Purpose RoBot. Create your Fork now.",
+  "keywords": ["telegram", "best", "youtube", "downloader", "open", "source", "multi", "purpose", "ffmpeg", "remote", "uploader"],
+  "website": "https://github.com/m4mallu/intermediabot",
+  "repository": "https://github.com/m4mallu/intermediabot",
+  "env": {
+        "API_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
+        "TG_BOT_TOKEN": {"description": "Get Bot Token From BotFather Bot","required": true},
+        "AUTH_USERS": {"description": "List of userIDs separated by <space>","required": true},
+        "PRE_FILE_TXT": {"description": "Text to be used prior to YouTube downloaded file name","required": true}
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+    {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"},
+    {"url": "heroku/python"}
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
