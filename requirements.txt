@@ -9,7 +9,6 @@
 aiohttp
 hachoir
 Pillow
-pyrogram
 requests
 tgcrypto
 git+https://github.com/ytdl-org/youtube-dl
