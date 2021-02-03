@@ -23,7 +23,7 @@ A advanced telegram bot which performs the following functions differently.
 
 ## Easy Way :
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/m4mallu/intermedibot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/m4mallu/intermediabot)
 
 Note: YouTube downloads having some errors when deployed in heroku. Try other vps to test if possible.
 
