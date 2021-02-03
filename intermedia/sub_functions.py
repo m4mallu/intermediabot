@@ -9,14 +9,21 @@ import os
 import os.path
 import time
 import pyrogram
-
-if bool(os.environ.get("env", False)):
-    from sample_config import Config
-else:
-    from config import Config
+import logging
 
 from translation import Translation
 
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
+config_path = os.path.join(os.getcwd(), 'config.py')
+if os.path.isfile(config_path):
+    from config import Config
+else:
+    from sample_config import Config
 
 @pyrogram.Client.on_message(pyrogram.Filters.photo)
 async def save_photo(bot, update):

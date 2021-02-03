@@ -6,17 +6,26 @@
 # Channel       - @MovieKeralam
 # ---------------------------------------------------------------------------------- #
 
+import logging
 import os
+import pyrogram
 import time
-
-if bool(os.environ.get("env", False)):
-    from sample_config import Config
-else:
-    from config import Config
 
 from translation import Translation
 from pyrogram import Client, Filters, InlineKeyboardMarkup, InlineKeyboardButton
 from helper.ytdlfunc import extractYt, create_buttons
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
+config_path = os.path.join(os.getcwd(), 'config.py')
+if os.path.isfile(config_path):
+    from config import Config
+else:
+    from sample_config import Config
 
 ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
 

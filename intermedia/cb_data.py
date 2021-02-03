@@ -7,12 +7,10 @@
 # ---------------------------------------------------------------------------------------- #
 
 import asyncio
+import logging
 import os
+import pyrogram
 import time
-if bool(os.environ.get("env", False)):
-    from sample_config import Config
-else:
-    from config import Config
 
 from intermedia.help_text import start_bot, bot_settings
 from intermedia.sub_functions import view_thumbnail, delete_thumbnail, del_thumb_confirm, close_button
@@ -26,10 +24,21 @@ from helper.ytdlfunc import downloadvideocli, downloadaudiocli
 from translation import Translation
 from intermedia.generate_screenshot import generate_screen_shot
 
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
+config_path = os.path.join(os.getcwd(), 'config.py')
+if os.path.isfile(config_path):
+    from config import Config
+else:
+    from sample_config import Config
+
 
 @Client.on_callback_query()
 async def catch_youtube_fmtid(bot, update):
-
     cb_data = update.data
     if cb_data.startswith("ytdata||"):
         yturl = cb_data.split("||")[-1]
@@ -184,7 +193,7 @@ async def send_file(bot, update, med, filename):
         a = await bot.send_message(
             text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
             chat_id=update.message.chat.id
-            #reply_to_message_id=update.message.message_id
+            # reply_to_message_id=update.message.message_id
         )
         time.sleep(5)
         await a.delete()

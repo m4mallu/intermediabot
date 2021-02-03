@@ -6,20 +6,20 @@
 # Channel       - @MovieKeralam
 # ----------------------------------------- #
 import logging
+import os
+import pyrogram
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-import os
-import pyrogram
-
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-if bool(os.environ.get("env", False)):
-    from sample_config import Config
-else:
+config_path = os.path.join(os.getcwd(), 'config.py')
+if os.path.isfile(config_path):
     from config import Config
+else:
+    from sample_config import Config
 
 if __name__ == "__main__":
     intermedia = dict(root="intermedia")
