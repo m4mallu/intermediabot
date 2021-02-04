@@ -43,14 +43,12 @@ async def trim(bot, update):
                     thumb=thumb_image_path,
                     caption="Sample Video:",
                     supports_streaming=True,
-                    reply_to_message_id=update.message.message_id
                 )
             try:
                 os.remove(o)
                 await bot.send_message(
                     text=Translation.MAKE_A_COPY_TEXT,
                     chat_id=update.message.chat.id,
-                    reply_to_message_id=update.message.message_id,
                     reply_markup=pyrogram.InlineKeyboardMarkup(
                         [
                             [pyrogram.InlineKeyboardButton("📘 Document", callback_data="d_copy"),
