@@ -16,6 +16,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from helper.display_progress import progress_for_pyrogram
 from intermedia.generate_screenshot import generate_screen_shot
+from intermedia.help_text import bot_settings
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -42,6 +43,7 @@ async def download_media(bot, update):
         a0 = await update.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(8)
         await a0.delete()
+        await bot_settings(bot, update)
         raise pyrogram.StopPropagation()
     else:
         if ("download" in update.text) and (update.reply_to_message is not None):
@@ -173,10 +175,7 @@ async def rename_file(bot, update):
                 )
                 try:
                     await d.delete()
-                    e = await bot.send_message(
-                        text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
-                        chat_id=update.message.chat.id,
-                    )
+                    e = await bot.send_message(text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG, chat_id=update.message.chat.id)
                     time.sleep(5)
                     await e.delete()
                     await generate_screen_shot(bot, update)
@@ -223,12 +222,9 @@ async def convert_to_video(bot, update):
                     )
                     try:
                         await f.delete()
-                        f = await bot.send_message(
-                            text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
-                            chat_id=update.message.chat.id,
-                        )
+                        g = await bot.send_message(text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG, chat_id=update.message.chat.id)
                         time.sleep(5)
-                        await f.delete()
+                        await g.delete()
                         await generate_screen_shot(bot, update)
                     except IndexError:
                         pass

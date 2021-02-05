@@ -27,23 +27,23 @@ class Translation(object):
     SETTINGS_TEXT = "<b>These are my available options:</b>"
     THUMB_CAPTION = "<code>This image is your current thumbnail, Tap</code><b> DEL THUMB </b><code>if you wish to " \
                     "clear it !</code> "
-    NO_THUMB = "⛔️ <b>There are no thumbnails in your local directory.</b>\n<code>Please upload an image to save it " \
+    NO_THUMB = "⛔️ <b>No Thumbnails.</b>\n<code>Please upload an image to save it " \
                "!</code> "
     DEL_CUSTOM_THUMB_NAIL = "✅ <b>Thumbnail cleared successfully.</b>\n<code>Thumbnail won't be available to the " \
                             "downloading media, unless you upload an image !</code> "
-    DEL_THUMB_CONFIRM = "⚠️ <b>Do you want to remove thumbnail?</b>\n<code>Thumbnail won't be available in the videos " \
+    DEL_THUMB_CONFIRM = "⚠️ <b>Do you wish to remove thumbnail?</b>\n<code>Thumbnail won't be available in the files " \
                         "when you delete it!</code> "
     LONG_FILE_NAME = "File Name limit allowed by Telegram is {alimit} characters!\nThe given file name has {num} " \
                      "characters.<b>LONGER FILENAMES AREn'T ALLOWED</b> Please short your file name and try again! "
-    FILE_TYPE_SELEC = "Select the file type for\n<b>File name:</b>{}"
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>Please wait: </b> 😉\nFor some Screenshots & sample video.<code> Usually it " \
-                                  "will take 30Sec. to upload it. Please be patient...</code>"
+    FILE_TYPE_SELEC = "<b>Select the format for File name:</b>\n👉 {}"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>Attention</b>⚠️\n<code>Please Wait for some Screenshots</code> "
     INPUT_MEDIA = "<b>Can I download this media for conversion?</b>"
     INPUT_ERROR = "<b>⚠️ Invalid input:</b>️\n<code>Input the file name as replay to the above message and " \
                   "check the supported extensions in welcome message !</code> "
     EXTENSIONS = ['.mkv', '.mp4', '.avi', '.webm']
     NO_SPAM_MSG = "⚠️ <b>Don't Spam Here</b>\n<code>Read the welcome message for better use of this bot !</code>"
     CAPTION_TEXT = "@moviekeralam"
+    TRIM_WAIT = "<b>Attention</b>⚠️\n<code>Please Wait 30Sec for a sample video. Be patient</code> 🤪"
     THANKS_MESSAGE = "<b>Thanks for using.Have a nice day</b>💕"
     MAKE_A_COPY_TEXT = "📚 <b> Can i make a copy of the same ?</b>"
     FINISHED_PROGRESS_STR = "◼️"

@@ -32,9 +32,11 @@ async def trim(bot, update):
         if dir_content is not None:
             start_time = "00:04:00"
             end_time = "00:05:00"
+            a = await bot.send_message(text=Translation.TRIM_WAIT, chat_id=update.message.chat.id)
             o = await cult_small_video(dir_content, output_directory, start_time, end_time)
             # Give a code pause for 30Sec to trim the video
             time.sleep(30)
+            await a.delete()
             await bot.send_chat_action(chat_id=update.message.chat.id, action="upload_video")
             if o is not None:
                 await bot.send_video(

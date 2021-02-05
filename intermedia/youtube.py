@@ -33,7 +33,7 @@ ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[
 @Client.on_message(Filters.regex(ytregex))
 async def ytdl(_, message):
     if message.from_user.id not in Config.AUTH_USERS:
-        await _.delete_messages(chat_id=message.chat.id, message_ids=message.message_id)
+        await message.delete()
         a = await message.reply_text(text=Translation.NOT_AUTH_TXT)
         time.sleep(8)
         await a.delete()
