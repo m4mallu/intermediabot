@@ -9,7 +9,6 @@
 import asyncio
 import logging
 import os
-import pyrogram
 import time
 
 from intermedia.help_text import start_bot, bot_settings
@@ -63,8 +62,11 @@ async def catch_youtube_fmtid(bot, update):
 @Client.on_callback_query()
 async def catch_youtube_dldata(bot, update):
     thumb_image_path = os.getcwd() + "/" + "thumbnails" + "/" + str(update.from_user.id) + ".jpg"
-    if not os.path.exists(thumb_image_path):
-        thumb_image_path = None
+    yt_thumb_image_path = os.getcwd() + "/" + "YouTubeThumb" + "/" + str(update.from_user.id) + ".jpg"
+    if os.path.exists(thumb_image_path):
+        thumb_image = thumb_image_path
+    else:
+        thumb_image = yt_thumb_image_path
     file_name = str(Config.PRE_FILE_TXT)
     cb_data = update.data
     # Callback Data Check (for Youtube formats)
@@ -118,7 +120,7 @@ async def catch_youtube_dldata(bot, update):
                 media=filename,
                 caption=os.path.basename(filename),
                 title=os.path.basename(filename),
-                thumb=thumb_image_path
+                thumb=thumb_image
             )
 
         if cb_data.startswith("video"):
@@ -129,7 +131,7 @@ async def catch_youtube_dldata(bot, update):
                 media=filename,
                 duration=dur,
                 caption=description,
-                thumb=thumb_image_path,
+                thumb=thumb_image,
                 supports_streaming=True
             )
 
@@ -138,7 +140,7 @@ async def catch_youtube_dldata(bot, update):
             med = InputMediaDocument(
                 media=filename,
                 caption=os.path.basename(filename),
-                thumb=thumb_image_path
+                thumb=thumb_image
             )
 
         if cb_data.startswith("docvideo"):
@@ -148,15 +150,17 @@ async def catch_youtube_dldata(bot, update):
             med = InputMediaDocument(
                 media=filename,
                 caption=description,
-                thumb=thumb_image_path
+                thumb=thumb_image
             )
 
         if med:
-            loop.create_task(send_file(bot, update, med, filename))
+            loop.create_task(send_file(bot, update, med))
 
         else:
             print("med not found")
 
+
+######################################### CB Data query for Bot Settings ###############################################
     else:
         # Callback Data Check (for bot settings)
         if cb_data.startswith(("close", "view_thumb", "del_thumb", "conf_thumb", "start_help", "settings",
@@ -183,18 +187,14 @@ async def catch_youtube_dldata(bot, update):
                 await convert_to_video_copy(bot, update)
             elif "clear_med" in cb_data:
                 await clear_media(bot, update)
+########################################################################################################################
 
-
-async def send_file(bot, update, med, filename):
+async def send_file(bot, update, med):
     try:
         await update.edit_message_text(text=Translation.UPLOAD_START)
         await bot.send_chat_action(chat_id=update.message.chat.id, action="upload_document")
         await update.edit_message_media(media=med)
-        a = await bot.send_message(
-            text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
-            chat_id=update.message.chat.id
-            # reply_to_message_id=update.message.message_id
-        )
+        a = await bot.send_message(text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG, chat_id=update.message.chat.id)
         time.sleep(5)
         await a.delete()
         await generate_screen_shot(bot, update)

@@ -9,11 +9,10 @@
 class Translation(object):
     NOT_AUTH_TXT = "⚠️ <b>Unauthorized Access</b> ⚠️\nYou are not in Auth Users.  So you can't use the core " \
                    "components of this bot. Inconvenience is regretted !"
-    DOWNLOAD_START = "📥<b>DOWNLOAD BEGIN</b>📥<i> Plz wait..</i>"
-    UPLOAD_START = "📤<b>UPLOAD BEGIN</b>📤<i> Plz wait..</i>"
+    DOWNLOAD_START = "📥<b>DOWNLOADING</b>📥<i> Plz wait..</i>"
+    UPLOAD_START = "📤<b>UPLOADING</b>📤<i> Plz wait..</i>"
     SAVED_CUSTOM_THUMB_NAIL = "<b>✅ Thumbnail Saved Successfully.</b>\n<code>This file will be used in upcoming " \
                               "rename or video conversions</code> "
-    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared successfully."
     SAVED_RECVD_DOC_FILE = "<b>✔️File Downloaded Successfully</b>\n⏱<code>Give the required file name with " \
                            "extension.Eg:</code><b>Terminator.mkv</b><code> as a reply to this message</code> "
     ACCESS_DENIED_TEXT = "You are not authorized to use this Bot."
@@ -27,7 +26,7 @@ class Translation(object):
     SETTINGS_TEXT = "<b>These are my available options:</b>"
     THUMB_CAPTION = "<code>This image is your current thumbnail, Tap</code><b> DEL THUMB </b><code>if you wish to " \
                     "clear it !</code> "
-    NO_THUMB = "⛔️ <b>No Thumbnails.</b>\n<code>Please upload an image to save it " \
+    NO_THUMB = "⛔️ <b>No thumbnails available.</b>\n<code>Upload an image to save it !" \
                "!</code> "
     DEL_CUSTOM_THUMB_NAIL = "✅ <b>Thumbnail cleared successfully.</b>\n<code>Thumbnail won't be available to the " \
                             "downloading media, unless you upload an image !</code> "
@@ -36,7 +35,7 @@ class Translation(object):
     LONG_FILE_NAME = "File Name limit allowed by Telegram is {alimit} characters!\nThe given file name has {num} " \
                      "characters.<b>LONGER FILENAMES AREn'T ALLOWED</b> Please short your file name and try again! "
     FILE_TYPE_SELEC = "<b>Select the format for File name:</b>\n👉 {}"
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>Attention</b>⚠️\n<code>Please Wait for some Screenshots</code> "
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>Attention</b>⚠️\n<code>Please Wait for Screenshots</code> "
     INPUT_MEDIA = "<b>Can I download this media for conversion?</b>"
     INPUT_ERROR = "<b>⚠️ Invalid input:</b>️\n<code>Input the file name as replay to the above message and " \
                   "check the supported extensions in welcome message !</code> "
@@ -62,3 +61,4 @@ class Translation(object):
                   "Name:&ensp;<b>{}</b>\nBot Username:&ensp;@{} "
     BOT_CV_TEXT = "<b>Video Conversion from:</b>\nName:&ensp;<b>{}</b>\nUser Name:&ensp;@{}\nUser Id:&ensp;{}\nBot " \
                   "Name:&ensp;<b>{}</b>\nBot Username:&ensp;@{} "
+    URL_ERROR = "<b>⚠️ Attention :</b>\nYour URL having some HTTP Errors ! Try with different URL..."
