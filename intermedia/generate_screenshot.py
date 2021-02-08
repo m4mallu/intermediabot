@@ -8,7 +8,6 @@
 
 import os
 import shutil
-
 from pyrogram import InputMediaPhoto
 from helper.gen_ss_help import generate_screen_shots
 from translation import Translation
