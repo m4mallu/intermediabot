@@ -17,6 +17,7 @@ from hachoir.parser import createParser
 from helper.display_progress import progress_for_pyrogram
 from intermedia.generate_screenshot import generate_screen_shot
 from intermedia.help_text import bot_settings
+from bot import cache1, cache2
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -24,14 +25,10 @@ logger = logging.getLogger(__name__)
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-config_path = os.path.join(os.getcwd(), 'config.py')
-if os.path.isfile(config_path):
-    from config import Config
-else:
+if bool(os.environ.get("ENV", False)):
     from sample_config import Config
-
-cache1 = {}
-cache2 = {}
+else:
+    from config import Config
 
 
 # -------------------------------- Bot will download media and rename as required -------------------------------------#

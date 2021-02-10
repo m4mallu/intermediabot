@@ -15,11 +15,13 @@ logger = logging.getLogger(__name__)
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-config_path = os.path.join(os.getcwd(), 'config.py')
-if os.path.isfile(config_path):
-    from config import Config
-else:
+if bool(os.environ.get("ENV", False)):
     from sample_config import Config
+else:
+    from config import Config
+
+cache1 = {}
+cache2 = {}
 
 if __name__ == "__main__":
     intermedia = dict(root="intermedia")
