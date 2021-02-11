@@ -1,8 +1,8 @@
 # File Name     - Multimedia
 # Description   - Tg file downloading, Renaming and converting to Doc / Video
-# Owner         - Kiddilan
+# Owner         - MalluBoy
 # Repo          - https://github.com/m4mallu
-# Tg Uid        - @kiddilan
+# Tg Id         - @space4renjith
 # Channel       - @MovieKeralam
 # ----------------------------------------------------------------------------- #
 

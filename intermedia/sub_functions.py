@@ -1,8 +1,8 @@
 # File Name     - Sub Functions
 # Description   - Sub functions like Set Thumbnail, View Thumbnail, Delete Thumbnail & Close Button Functions
-# Owner         - Kiddilan
+# Owner         - MalluBoy
 # Repo          - https://github.com/m4mallu
-# Tg Uid        - @kiddilan
+# Tg Id         - @space4renjith
 # Channel       - @MovieKeralam
 # --------------------------------------------------------------------------------------------------------- #
 import os

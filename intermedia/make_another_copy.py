@@ -2,9 +2,9 @@
 # Description   - Make another copy of a converted file. If a file is converted and send to the chat id, can have the
 #                 option to send it as a video also. This will be very useful for movie channel owners to convert
 #                 a Tg / YouTube dl media in to Video & Doc file in a single download.
-# Owner         - Kiddilan
+# Owner         - MalluBoy
 # Repo          - https://github.com/m4mallu
-# Tg Uid        - @kiddilan
+# Tg Id         - @space4renjith
 # Channel       - @MovieKeralam
 # ------------------------------------------------------------------------------------------------------------------- #
 

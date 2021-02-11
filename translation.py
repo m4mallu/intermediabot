@@ -1,8 +1,8 @@
 # File Name     - Translation
 # Description   - Text translation file
-# Owner         - Kiddilan
+# Owner         - M4Mallu
 # Repo          - https://github.com/m4mallu
-# Tg Uid        - @kiddilan
+# Tg Id         - @space4renjith
 # Channel       - @MovieKeralam
 # ---------------------------------------------------------------------------------------- #
 

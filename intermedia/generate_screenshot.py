@@ -1,8 +1,8 @@
 # File Name     - Generate Screenshot
 # Description   - Generating Screenshots for file formatting & YouTube DL functions
-# Owner         - Kiddilan
+# Owner         - MalluBoy
 # Repo          - https://github.com/m4mallu
-# Tg Uid        - @kiddilan
+# Tg Id         - @space4renjith
 # Channel       - @MovieKeralam
 # -------------------------------------------------------------------------------- #
 
