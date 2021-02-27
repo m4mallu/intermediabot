@@ -50,7 +50,7 @@ coverage.xml
 # Translations
 *.mo
 *.pot
-
+config.py
 # Django stuff:
 *.log
 local_settings.py
