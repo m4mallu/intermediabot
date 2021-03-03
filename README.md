@@ -1,7 +1,12 @@
 # [IntermediaBot](https://github.com/m4mallu/intermediabot) 🤖
 
 An Open Source ALL-In-One Telegram RoBot, that can do a lot of things.
+ 
+# Upgraded:
 
+Support for this repo is being discontinued !
+
+An upgraded version of this bot can see [HERE](https://github.com/m4mallu/ashesOFpheonix)
 
 # About :
 A advanced telegram bot which performs the following functions differently.
