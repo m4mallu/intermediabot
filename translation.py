@@ -51,10 +51,10 @@ class Translation(object):
                   "problem persists, May be your server IP got blocked by the YouTube </code>😔 "
     PROCESS_START = "Processing Youtube Url 🔎 🔎 🔎"
 
-    CUSTOM_CAPTION_DOC = "━━━━━━━━━ ✧ ━━━━━━━━\n&ensp;💢<a href='https://t.me/MoviekeralamLinks'>@MoviekeralamLinks</a" \
-                         ">💢\n━━━━━━━━━ ✧ ━━━━━━━━\n\n🎗<b>ʝσιи🎗ѕнαяє🎗ѕυρρσят</b>🎗 "
+    CUSTOM_CAPTION_DOC = "━━━━━━━━━ ✧ ━━━━━━━━\n&ensp;📎<a href='https://t.me/CELLULOID_LINKS'>@CELLULOID_LINKS</a" /n📍"href='https://t.me/@THE_CELLULOID'>@THE_CELLULOID</a>📍  \
+                         ">📎\n━━━━━━━━━ ✧ ━━━━━━━━\n\n🎗<b>ʝσιи🎗ѕнαяє🎗ѕυρρσят</b>🎗 "
     CUSTOM_CAPTION_VIDEO = "🏷:\n\n&ensp;&ensp;&ensp; 🎞 <b>STREAMABLE FILE</b> 🎞\n\n&ensp;&ensp;&ensp;💢<a " \
-                           "href='https://t.me/MoviekeralamLinks'>@MoviekeralamLinks</a>💢 "
+                           "href='https://t.me/CELLULOID_LINKS'>@CELLULOID_LINKS</a>💢" \n"href='https://t.me/@THE_CELLULOID'>@THE_CELLULOID</a>💢 "
     BOT_PM_TEXT = "<b>PM from:</b>\nName:&ensp;<b>{}</b>\nUser Name:&ensp;@{}\nUser Id:&ensp;{}\nBot Name:&ensp;<b>{" \
                   "}</b>\nBot Username:&ensp;@{} "
     BOT_RN_TEXT = "<b>Rename from:</b>\nName:&ensp;<b>{}</b>\nUser Name:&ensp;@{}\nUser Id:&ensp;{}\nBot " \
